@@ -1,0 +1,40 @@
+<html>
+<head>
+<script type="text/javascript">
+function process() {
+
+    var temperature = Number(document.temp.temp.value);
+    var tempType;
+    var result;
+
+    for (var i=0; i < document.temp.choice.length; i++) {
+        if (document.temp.choice[i].checked) {
+            tempType = document.temp.choice[i].value;
+        }
+    }
+    if (tempType == 'fahrenheit') {
+        result = temperature * 9/5 + 32;
+    }
+ else {
+        result = (temperature -  32)  *  5/9;
+    }
+    document.temp.resultField.value = result;
+}
+</script>
+</head>
+<body>
+<form name="temp">
+
+<input type="text" id="temp" placeholder="Enter Temperature"><br>
+<input type="radio" name="choice" value="farenheit" checked/> Conver to fahrenheit<br>
+<input type="radio" name="choice" value="celsius" checked/>Convert to celsius<br>
+<label for="resultField">Result: </label>
+<input type="text" id="resultField"><br>
+<input type="button" value="Convert" onclick="process()">
+</form>
+
+
+
+
+</body>
+</html>

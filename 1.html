@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type = "text/javascript">
+	function check(){
+		var number = document.getElementById("num").value;
+		
+		if(number>100){
+			alert("The number is greater than 100.");
+		}
+		else{
+			alert("The number is not greater than 100.");
+		}
+	}
+	
+</script>
+</head>
+
+<body>
+
+<form onsubmit="check()">
+	<input type = "number" id = "num"/>
+    <input type = "submit"/>
+</form>
+
+</body>
+</html>
